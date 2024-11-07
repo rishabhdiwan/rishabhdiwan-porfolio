@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.name }}</title>
+    <link rel="stylesheet" href="{{ theme.uri }}/assets/css/main.css">
+    <script src="{{ theme.uri }}/assets/js/main.js" defer></script>
+    {% block wp_head %}
+        {{ wp_head() }}
+    {% endblock %}
+</head>
+<body class = "{{ body_class }}">
+    <header>
+        <div class = "rd-web-header-section">
+            <div class = "container">
+                <div class = "header-content">
+                    <div class = "site-name">
+                        {# <a href = "#home">
+                            <h2>{{ site.name }}</h2>
+                        </a> #}
+                        <img src = "/wp-content/themes/Portfolio/assets/img/rishabhh.jpg" alt = "rishabh"/>
+                    </div>
+                    <div class = "hire-mobile animated">
+                        <a href = "/#contact-us">Hire Me!</a>
+                    </div>
+                    <div class = "navbar">
+                        <nav>
+                            <ul>
+                                {% for item in menu.items %}
+                                    <li><a href="{{ item.link }}" class = "nav-item">{{ item.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class = "hamburger-section">
+                        <div class = "hamburger">
+                            <i class="fa-solid fa-burger"></i>
+                        </div>
+                        <div class = "close-button">
+                            <i class="fa-solid fa-square-xmark" style="color: #845fee;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "navbar-mobile">
+            <nav>
+                <ul>
+                    {% for item in menu.items %}
+                        <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-circle"></div>
+    </div>

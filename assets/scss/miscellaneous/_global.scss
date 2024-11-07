@@ -1,0 +1,296 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+::selection {
+    background-color: $cool-mysterious-blue-tinged-purple;
+    color: $white;
+}
+input:focus {
+    border-color: $cool-mysterious-blue-tinged-purple;
+    box-shadow: 3px 5px 0px 0px $black;
+    outline: none;
+}
+textarea:focus {
+    border-color: $cool-mysterious-blue-tinged-purple;
+    box-shadow: 3px 5px 0px 0px $black;
+    outline: none;
+}
+body {
+    overflow-x: hidden;
+    background: url('/wp-content/themes/Portfolio/assets/img/body-bg.png');
+    margin: 0;
+    padding: 0;
+    // cursor: none;
+}
+.container {
+    max-width: 1152px;
+    margin: auto;
+    @include mobile() {
+        padding: 0 14px;
+    }
+    @include tablet() {
+        padding: 0 34px;
+    }
+}
+h1 {
+    font-family: $lekton-bold;
+    font-size: 76px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    @include mobile() {
+        font-size: 45px;
+        letter-spacing: 2px;
+    }
+    @include tablet() {
+        font-size: 58px;
+        letter-spacing: 2px;
+    }
+}
+h2 {
+    font-family: $lekton-bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    @include mobile() {
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+    @include tablet() {
+        font-size: 38px;
+        letter-spacing: 2px;
+    }
+}
+h3 {
+    font-family: $lekton;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 1rem 0;
+    @include mobile() {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    @include tablet() {
+        font-size: 33px;
+        letter-spacing: 2px;
+    }
+}
+h4 {
+    font-family: $lekton;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+    @include mobile() {
+        font-size: 23px;
+        letter-spacing: 2px;
+    }
+    @include tablet() {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+}
+h5 {
+    text-align: center;
+    font-family: $lekton;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+    @include mobile() {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+    @include tablet() {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+}
+a {
+    font-family: $lekton-bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0 1rem;
+    margin: 0;
+}
+li {
+    font-family: $lekton;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 18px;
+    color: $gray25;
+}
+p {
+    font-family: $lekton;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 18px;
+    color: $gray25;;
+}
+@include mobile() {
+    p, li, a {
+        font-size: 16px;
+    }
+}
+@include tablet() {
+    p, li, a {
+        font-size: 17px;
+    }
+}
+input {
+    padding: 15px;
+    font-size: 1rem;
+    font-family: $lekton;
+    font-weight: bold;
+    border: 2px solid $black;
+    border-radius: 20px;
+    width: calc(100% - 10px);
+    @include mobile() {
+        width: unset;
+    }
+    @include mobile() {
+        font-size: 16px;
+    }
+    @include tablet() {
+        font-size: 17px;
+    }
+}
+::placeholder {
+    color: $black;
+}
+textarea {
+    padding: 15px;
+    font-size: 1rem;
+    font-family: $lekton;
+    font-weight: bold;
+    border: 2px solid $black;
+    border-radius: 20px;
+    @include mobile() {
+        width: unset;
+    }
+    @include mobile() {
+        font-size: 16px;
+    }
+    @include tablet() {
+        font-size: 17px;
+    }
+}
+
+input[type = submit] {
+    color: $white;
+    border: none;
+    font-family: $lekton-bold;
+    font-size: 18px;
+    line-height: 46px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 100%;
+    background-image: linear-gradient(to right, $byzantine-blue 0%, $cool-mysterious-blue-tinged-purple 100%), radial-gradient(circle at top left, $byzantine-blue, $cool-mysterious-blue-tinged-purple);
+    @include mobile() {
+        font-size: 16px;
+    }
+    @include tablet() {
+        font-size: 17px;
+    }
+}
+input[type = submit]:hover {
+    background-image: linear-gradient(to left, $byzantine-blue 0%, $cool-mysterious-blue-tinged-purple 100%), radial-gradient(circle at bottom right, $byzantine-blue, $cool-mysterious-blue-tinged-purple);
+}
+button {
+    color: $white;
+    border: none;
+    font-family: $lekton-bold;
+    font-size: 18px;
+    line-height: 46px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-image: linear-gradient(to right, $byzantine-blue 0%, $cool-mysterious-blue-tinged-purple 100%), radial-gradient(circle at top left, $byzantine-blue, $cool-mysterious-blue-tinged-purple);
+}
+img {
+    width: 100%;
+}
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+}
+
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: $cool-mysterious-blue-tinged-purple;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-circle {
+    width: 30px;
+    height: 30px;
+    border: 2px solid $cool-mysterious-blue-tinged-purple;
+    background-color: $cool-mysterious-blue-tinged-purple;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    transition: all 0.1s ease;
+}
+
+/* Hover effect */
+.cursor-circle.enlarge {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: scale(1.2);
+    opacity: 0.3;
+}
+
+// Animation
+@keyframes ringingBell {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+@keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+.zoom {
+    animation: zoom 0.5s ease-in-out infinite
+}
+// usage:- ringingBell 0.1s ease-in-out infinite
+
+.typed-cursor {
+    display: none;
+}

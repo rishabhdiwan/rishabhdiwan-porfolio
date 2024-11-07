@@ -1,0 +1,10 @@
+.four-zero-four {
+    position: relative;
+    height: 84vh;
+    .four-zero-four-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

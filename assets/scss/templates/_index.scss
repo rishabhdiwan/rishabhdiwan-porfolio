@@ -1,0 +1,330 @@
+.rd-web-custom-home-class {
+    // Banner Section
+    .banner-section {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+        .banner {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            @include general_flexbox_usage();
+            @include mobile() {
+                text-align: center;
+                flex-flow: column-reverse;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+            }
+            @include tablet() {
+                flex-flow: column-reverse;
+                text-align: center;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -30%);
+                width: 100%;
+            }
+            .introduction {
+                width: 600px;
+                flex: 0 0 54%;
+                align-self: center;
+                @include mobile() {
+                    flex: 0 0 100%;
+                    width: unset;
+                }
+                @include tablet() {
+                    flex: 0 0 100%;
+                    width: unset;
+                }
+                h2 {
+                    margin: 0;
+                }
+                h1 {
+                    margin-bottom: 5rem;
+                }
+                .typewriter {
+                    margin: 5rem 0 0 0;
+                    font-family: $lekton-bold;
+                    font-size: 33px;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    @include mobile() {
+                        font-size: 24px;
+                        letter-spacing: 2px;
+                        height: 52px;
+                    }
+                }
+                a {
+                    cursor: pointer;
+                }
+            }
+            .image {
+                flex: 0 0 46%;
+                align-self: center;
+                @include mobile() {
+                    flex: 0 0 100%;
+                }
+                @include tablet() {
+                    margin-top: 3rem;
+                    flex: 0 0 100%;
+                }
+                img {
+                    width: 100%;
+                    height: 600px;
+                    @include mobile() {
+                        height: 300px;
+                    }
+                    @include tablet() {
+                        height: 450px;
+                    }
+                }
+            }
+        }
+        canvas {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    // About Section
+    .rd-web-about {
+        padding: 5rem 0;
+        @include mobile() {
+            padding: 1rem 0;
+        }
+        .about-section-wrapper {
+            @include general_flexbox_usage();
+            .side {
+                flex: 0 0 45%;
+                @include mobile() {
+                    flex: 0 0 100%;
+                }
+                .about-svg {
+                    height: 500px;
+                }
+            }
+        }
+    }
+
+    // Technical Skills
+    .rd-web-technical-skills {
+        padding: 5rem 0;
+        .technical-skills {
+            display: grid;
+            grid-template-columns: 23.9% 23.9% 47.1%;
+            justify-content: space-between;
+            @include mobile() {
+                gap: 25px;
+                grid-template-columns: 1fr;
+            }
+            @include tablet() {
+                gap: 25px;
+                grid-template-columns: 100%;
+            }
+            .card {
+                border-radius: 20px;
+                background-color: $lavender-mist;
+                border: 1px solid $pale-lavender;
+                padding: 1.3rem;
+                height: max-content;
+                .skill-icons {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+                    gap: 21px;
+                    justify-content: space-between;
+                    align-items: center;  
+                    margin-top: 2rem;
+                    @include mobile() {
+                        grid-template-columns: repeat(4, minmax(60px, 1fr));
+                        gap: 25px;
+                    }
+                    @include tablet() {
+                        grid-template-columns: repeat(6, minmax(70px, 1fr));
+                        gap: 39px;
+                    }
+                    .icon {
+                        width: 90px;
+                        height: 90px;
+                        cursor: pointer;
+                        @include mobile() {
+                            width: 60px;
+                            height: 60px;
+                        }
+                        @include tablet() {
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }
+                    .icon:hover, .icon:active {
+                        transform: scale(1.30);
+                    }
+                    .icon:focus {
+                        transform: scale(1.30);
+                    }
+                }
+            }
+        }
+    }
+
+    // Projects
+    .rd-web-projects {
+        padding: 5rem 0;
+        .rd-projects-slider {
+            .slide {
+                margin: 0 2rem 0 0;
+                @include mobile() {
+                    margin: 0;
+                }
+                .project-image {
+                    .project-thumbnail {
+                        border-radius: 20px 20px 0 0;
+                        height: 250px;
+                    }
+                }
+                .details {
+                    border-radius: 0 0 20px 20px;
+                    background-color: $lavender-mist;
+                    border: 1px solid $pale-lavender;
+                    padding: 1rem;
+                    ul {
+                        list-style: disc;
+                        margin-bottom: 1.3rem;
+                    }
+                    h4 {
+                        margin: 0;
+                    }
+                    a {
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        color: $white;
+                        background-image: linear-gradient(to right, $byzantine-blue 0%, $cool-mysterious-blue-tinged-purple 100%), radial-gradient(circle at top left, $byzantine-blue, $cool-mysterious-blue-tinged-purple);
+                    }
+                    a:hover {
+                        background-image: linear-gradient(to left, $byzantine-blue 0%, $cool-mysterious-blue-tinged-purple 100%), radial-gradient(circle at bottom right, $byzantine-blue, $cool-mysterious-blue-tinged-purple);
+                    }
+                }
+            }
+        }
+    }
+    // Contact Us
+    .rd-web-contact-details {
+        padding: 5rem 0;
+        @include tablet() {
+            padding: 6rem 0;
+        }
+        .contact-form-and-other-contact-means {
+            @include general_flexbox_usage();
+            @include mobile() {
+                flex-flow: column-reverse;
+            }
+            .contact-form {
+                flex: 0 0 50%;
+                @include mobile() {
+                    flex: 0 0 100%;
+                }
+                input, textarea {
+                    margin: 0.5rem 0;
+                }
+                input[type = text], input[type = email] {
+                    width: calc(100% - 35px);
+                }
+                textarea {
+                    width: calc(100% - 35px);
+                }
+                .my-contact-non-desktop {
+                    display: none;
+                    font-family: $lekton;
+                    font-weight: bold;
+                    line-height: 30px;
+                    font-size: 22px;
+                    font-size: 26px;
+                    margin-top:3rem;
+                    @include mobile() {
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                    }
+                    .detail {
+                        // margin-right: 3rem;
+                        a {
+                            text-transform: lowercase;
+                            color: $black;
+                        }
+                        img {
+                            width: 28px;
+                            height: 23px;
+                        }
+                    }
+                }
+            }
+            .other-means-to-contact {
+                flex: 0 0 42%;
+                position: relative;
+                bottom: 52px;
+                @include mobile() {
+                    flex: 0 0 100%;
+                    bottom: 20px;
+                }
+                .my-contact {
+                    font-family: $lekton;
+                    font-weight: bold;
+                    line-height: 30px;
+                    font-size: 26px;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 40px;
+                    @include general_flexbox_usage();
+                    @include tablet() {
+                        left: 0;
+                    }
+                    .detail {
+                        margin-right: 2rem;
+                        a {
+                            text-transform: lowercase;
+                            color: $black;
+                        }
+                        img {
+                            width: 32px;
+                            height: 27px;
+                        }
+                    }
+                }
+                @include mobile() {
+                    .my-contact {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .hire {
+        background-color: $cool-mysterious-blue-tinged-purple;
+        margin: 3rem;
+        padding: 1rem;
+        display: inline-block;
+        position: fixed;
+        right: 0;
+        bottom: 1rem;
+        border-radius: 26px;
+        cursor: pointer;
+        z-index: 3;
+        box-shadow: 3px 5px 2px 0 $black;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 25px;
+        text-align: center;
+        @include mobile() {
+            display: none;
+        }
+    }
+    .animated {
+        animation: ringingBell 0.5s ease-in-out infinite;
+    }
+    .animated:hover {
+        animation: none;
+    }
+}

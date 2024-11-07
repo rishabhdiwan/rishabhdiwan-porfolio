@@ -1,0 +1,8 @@
+# Ignore node_modules in the theme directory
+/node_modules
+
+# Ignore the DDEV config in the root directory
+../../../.ddev/
+
+# Ignore uploads in wp-content
+../../uploads/

@@ -1,0 +1,140 @@
+{% include 'parts/header.twig' %}
+{# Banner #}
+<div id = "home" class = "rd-web-banner">
+    <div id="particles-js" class = "particles-effect banner-section">
+        <div class = "container">
+            <div class = "banner">
+                <div class = "side introduction">
+                    <h2>{{ animated_line_greetings }}</h2>
+                    <h1>{{ animated_line_name }}</h1>
+                    <span class = "typewriter">{{ animated_line_experience }}</span>
+                </div>
+                <div class = "side image">
+                    <img data-src = "/wp-content/themes/Portfolio/assets/img/programming-animate.svg" alt = "rishabh-is-coding" class = "lazy-svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# About #}
+<div class = "rd-web-about" id = "about">
+    <div class = "container">
+        <div class = "about-section-wrapper">
+            <div class = "side">
+                <img data-src = "/wp-content/themes/Portfolio/assets/img/creativity-animate.svg" class = "lazy-svg about-svg"/>
+            </div>
+            <div class = "side">
+                <h2>{{ title }}</h2>
+                <p>{{ body }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# Technical Skills #}
+<div class = "rd-web-technical-skills" id = "technical-skills">
+    <div class = "container">
+        <h2>Technical Skills</h2>
+        <div class = "technical-skills">
+            <div class = "lang card" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="bottom">
+                <h3>Languages</h3>
+                <div class= "skill-icons">
+                    <div class = "icon"><img src = "{{ skill_1_l }}" alt = "html" /></div>
+                    <div class = "icon"><img src = "{{ skill_2_l }}" alt = "css" /></div>
+                    <div class = "icon"><img src = "{{ skill_3_l }}" alt = "javascript" /></div>
+                    <div class = "icon"><img src = "{{ skill_4_l }}" alt = "php" /></div>
+                    <div class = "icon"><img src = "{{ skill_5_l }}" alt = "twig" /></div>
+                </div>
+            </div>
+            <div class = "cms card" data-aos="fade-down" data-aos-duration="1500" data-aos-anchor-placement="bottom">
+                <h3>CMS</h3>
+                <div class= "skill-icons">
+                    <div class = "icon"><img src = "{{ skill_1_cms }}" alt = "wordpress" /></div>
+                    <div class = "icon"><img src = "{{ skill_2_cms }}" alt = "drupal" /></div>
+                </div>
+            </div>
+            <div class = "frame-lib-tool card" data-aos="fade-down" data-aos-duration="2000" data-aos-anchor-placement="bottom">
+                <h3>Tools, Frameworks and Libraries</h3>
+                <div class= "skill-icons">
+                    <div class = "icon"><img src = "{{ skill_1_lft }}" alt = "sass" /></div>
+                    <div class = "icon"><img src = "{{ skill_2_lft }}" alt = "git" /></div>
+                    <div class = "icon"><img src = "{{ skill_3_lft }}" alt = "stripe" /></div>
+                    <div class = "icon"><img src = "{{ skill_4_lft }}" alt = "ddev" /></div>
+                    <div class = "icon"><img src = "{{ skill_5_lft }}" alt = "lando" /></div>
+                    <div class = "icon"><img src = "{{ skill_6_lft }}" alt = "docker" /></div>
+                    <div class = "icon"><img src = "{{ skill_7_lft }}" alt = "bootstrap" /></div>
+                    <div class = "icon"><img src = "{{ skill_8_lft }}" alt = "slick" /></div>
+                    <div class = "icon"><img src = "{{ skill_9_lft }}" alt = "tailwind" /></div>
+                    <div class = "icon"><img src = "{{ skill_10_lft }}" alt = "npm" /></div>
+                    <div class = "icon"><img src = "{{ skill_11_lft }}" alt = "composer" /></div>
+                    <div class = "icon"><img src = "{{ skill_12_lft }}" alt = "jquery" /></div>
+                    <div class = "icon"><img src = "{{ skill_13_lft }}" alt = "laravel" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# Projects #}
+<div class = "rd-web-projects" id = "projects">
+    <div class = "container">
+        <h2>Projects that I've worked on</h2>
+        <div class = "rd-projects-slider">
+            {% for project in projects %}
+                <div class = "slide">
+                    <div class = "project-image">
+                        <img src = "{{ project.thumbnail }}" class = "project-thumbnail"/>
+                    </div>
+                    <div class = "details">
+                        <h3>{{ project.title }}</h3>
+                        <p>{{ project.post_content }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{# Contact #}
+<div class = "rd-web-contact-details" id = "contact-us">
+    <div class = "container">
+        <h2>Let's Talk!</h2>
+        <div class = "contact-form-and-other-contact-means">
+            <div class = "contact-form">
+                {{ lets_talk }}
+                <div class = "my-contact-non-desktop">
+                    <div class = "detail">
+                        <a href="mailto:a7xrishabhdiwan@gmail.com">
+                            <img src = "/wp-content/themes/Portfolio/assets/img/gmail.png" class = "zoom"/>
+                        </a>
+                    </div>
+                    <div class = "detail">
+                        <a href="https://www.linkedin.com/" target = "_blank">
+                            <i class = "fa-brands fa-linkedin fa-2xl zoom" style="color: #1a5fb4;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "other-means-to-contact">
+                <img data-src = "/wp-content/themes/Portfolio/assets/img/emails-animate.svg" class = "lazy-svg"/>
+                <div class = "my-contact">
+                    <div class = "detail">
+                        <a href="mailto:a7xrishabhdiwan@gmail.com">
+                            <img src = "/wp-content/themes/Portfolio/assets/img/gmail.png" class = "zoom"/>
+                        </a>
+                    </div>
+                    <div class = "detail">
+                        <a href="https://www.linkedin.com/" target = "_blank">
+                            <i class = "fa-brands fa-linkedin fa-2xl zoom" style="color: #1a5fb4;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class = "hire animated" href = "/#contact-us">Hire Me!</a>
+
+{% include 'parts/footer.twig' %}

@@ -1,0 +1,18 @@
+footer {
+    .footer-section {
+        background-image: linear-gradient(to right, $byzantine-blue 0%, $cool-mysterious-blue-tinged-purple 100%), radial-gradient(circle at top left, $byzantine-blue, $cool-mysterious-blue-tinged-purple);
+        color: #fff;
+        padding: 0.5rem 0;
+        margin-top: 5rem;
+        @include mobile() {
+            margin-top: 0;
+        }
+        h5 {
+            font-weight: lighter;
+            text-align: center;
+        }
+        h4 {
+            text-align: center;
+        }
+    }
+}
